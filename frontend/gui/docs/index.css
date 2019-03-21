@@ -8,11 +8,12 @@ body,
 	height: inherit;
 }
 body {
-	font-family: "Catamaran", Roboto, Helvetica, Arial, sans-serif;
+	font-family: 'Catamaran', Roboto, Helvetica, Arial, sans-serif;
 }
 .height-inherit-vh {
 	min-height: 80vh;
 }
+
 /*LOGO Font*/
 @import url(//db.onlinewebfonts.com/c/84253ac850a27903273770579bbf9313?family=FrankentypeW01-Regular);
 @font-face {
@@ -23,54 +24,6 @@ body {
 		url("https://db.onlinewebfonts.com/t/84253ac850a27903273770579bbf9313.woff") format("woff"),
 		url("https://db.onlinewebfonts.com/t/84253ac850a27903273770579bbf9313.ttf") format("truetype"),
 		url("https://db.onlinewebfonts.com/t/84253ac850a27903273770579bbf9313.svg#FrankentypeW01-Regular") format("svg");
-}
-/*Catamaran*/
-@font-face {
-	font-family: 'Catamaran';
-	font-weight: 400;
-	font-style: normal;
-	src: url('/fonts/Catamaran-regular/Catamaran-regular.eot');
-	src: url('/fonts/Catamaran-regular/Catamaran-regular.eot?#iefix') format('embedded-opentype'), local('Catamaran'),
-		local('Catamaran-regular'), url('/fonts/Catamaran-regular/Catamaran-regular.woff2') format('woff2'),
-		url('/fonts/Catamaran-regular/Catamaran-regular.woff') format('woff'),
-		url('/fonts/Catamaran-regular/Catamaran-regular.ttf') format('truetype'),
-		url('/fonts/Catamaran-regular/Catamaran-regular.svg#Catamaran') format('svg');
-}
-
-@font-face {
-	font-family: 'Catamaran';
-	font-weight: 500;
-	font-style: normal;
-	src: url('/fonts/Catamaran-500/Catamaran-500.eot');
-	src: url('/fonts/Catamaran-500/Catamaran-500.eot?#iefix') format('embedded-opentype'), local('Catamaran Medium'),
-		local('Catamaran-500'), url('/fonts/Catamaran-500/Catamaran-500.woff2') format('woff2'),
-		url('/fonts/Catamaran-500/Catamaran-500.woff') format('woff'),
-		url('/fonts/Catamaran-500/Catamaran-500.ttf') format('truetype'),
-		url('/fonts/Catamaran-500/Catamaran-500.svg#Catamaran') format('svg');
-}
-
-@font-face {
-	font-family: 'Catamaran';
-	font-weight: 600;
-	font-style: normal;
-	src: url('/fonts/Catamaran-600/Catamaran-600.eot');
-	src: url('/fonts/Catamaran-600/Catamaran-600.eot?#iefix') format('embedded-opentype'), local('Catamaran SemiBold'),
-		local('Catamaran-600'), url('/fonts/Catamaran-600/Catamaran-600.woff2') format('woff2'),
-		url('/fonts/Catamaran-600/Catamaran-600.woff') format('woff'),
-		url('/fonts/Catamaran-600/Catamaran-600.ttf') format('truetype'),
-		url('/fonts/Catamaran-600/Catamaran-600.svg#Catamaran') format('svg');
-}
-
-@font-face {
-	font-family: 'Catamaran';
-	font-weight: 700;
-	font-style: normal;
-	src: url('/fonts/Catamaran-700/Catamaran-700.eot');
-	src: url('/fonts/Catamaran-700/Catamaran-700.eot?#iefix') format('embedded-opentype'), local('Catamaran Bold'),
-		local('Catamaran-700'), url('/fonts/Catamaran-700/Catamaran-700.woff2') format('woff2'),
-		url('/fonts/Catamaran-700/Catamaran-700.woff') format('woff'),
-		url('/fonts/Catamaran-700/Catamaran-700.ttf') format('truetype'),
-		url('/fonts/Catamaran-700/Catamaran-700.svg#Catamaran') format('svg');
 }
 /*End Fonts*/
 
@@ -95,7 +48,9 @@ body {
 }
 
 /*Overall CSS Styles*/
-
+.line-height {
+	line-height: 1.5;
+}
 /* EVRO Background Colors*/
 .evro-navy-back {
 	background-color: #2c3d5c;
@@ -171,7 +126,12 @@ body {
 .nav-link:focus,
 .nav-link:active,
 .nav-link:active:focus,
-.nav-link.active {
+.nav-link.active,
+.contact-link:hover,
+.contact-link:focus,
+.contact-link:active,
+.contact-link:active:focus,
+.contact-link.active {
 	border-color: #e2282e !important;
 	background-color: transparent !important;
 	color: #e2282e !important;
@@ -266,7 +226,12 @@ svg.react-chart > text {
 .skill-category {
 	line-height: 3.3;
 }
-
+.card .card-body h3 {
+	font-weight: 300 !important;
+}
+.card .card-body .card-text {
+	font-weight: 100 !important;
+}
 /* ----------- Mobile Devices ----------- */
 
 /* ----------- Orientation Lock ----------- */
@@ -279,9 +244,6 @@ svg.react-chart > text {
 		padding-top: 2rem;
 		padding-bottom: 2rem;
 	}
-	.mobile-margin-col {
-		bottom: 1rem;
-	}
 }
 @media only screen and (min-width: 768px) {
 	.bring-to-front {
@@ -292,6 +254,9 @@ svg.react-chart > text {
 	}
 	.hide-ham {
 		display: none;
+	}
+	.card-section-pad {
+		padding-bottom: 2rem;
 	}
 }
 @media only screen and (min-width: 768px) and (max-width: 1033px) {
@@ -325,7 +290,21 @@ svg.react-chart > text {
 		min-height: 89.6vh;
 	}
 }
-
+@media only screen and (min-width: 992px) {
+	.desk-absolute {
+		position: absolute;
+		top: 20rem;
+	}
+	.desk-margin {
+		margin-bottom: 12rem;
+		position: relative;
+	}
+}
+@media only screen and (max-width: 992px) {
+	.mobile-pad {
+		padding-bottom: 3rem;
+	}
+}
 @media only screen and (min-width: 1034px) {
 	.height-inherit-vh {
 		min-height: 89vh;

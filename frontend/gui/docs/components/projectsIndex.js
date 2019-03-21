@@ -33,14 +33,14 @@ class ProjectIndexPage extends React.Component {
 	render() {
 		return (
 			<div>
-				<MDBContainer>
-					<MDBRow>
+				<MDBContainer className="pt-5">
+					<MDBRow className="pb-3">
 						<MDBCol md="12">
-							<h1>Portfolio</h1>
-							<h2>
+							<h1 className="h1">Portfolio</h1>
+							<p className="h5-responsive">
 								Here are just a few featured projects I’ve worked on outsite of federal government
 								consulting.
-							</h2>
+							</p>
 						</MDBCol>
 					</MDBRow>
 					<MDBRow>

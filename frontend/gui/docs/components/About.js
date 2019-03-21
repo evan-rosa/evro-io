@@ -43,7 +43,6 @@ class HomePage extends React.Component {
 					about_skill_data_science_col_two: res.data.items[0].about_skill_data_science_col_two,
 					about_education: res.data.items[0].about_education
 				});
-				console.log(res.data.items);
 			})
 			.catch((error) => this.setState({ error }));
 		axios
@@ -53,7 +52,6 @@ class HomePage extends React.Component {
 					id: res.data.items[0].id,
 					resume: res.data.items[0].meta.download_url
 				});
-				console.log(res.data.items);
 			})
 			.catch((error) => this.setState({ error }));
 	}
@@ -65,20 +63,16 @@ class HomePage extends React.Component {
 	render() {
 		return (
 			<div>
-				<MDBContainer>
+				<MDBContainer className="pb-5">
 					<MDBRow className="pt-5">
 						<MDBCol md="12">
-							<h1>About</h1>
-							<p>{this.state.about_p}</p>
+							<h1 className="h1">About</h1>
+							<p className="h5-responsive">{this.state.about_p}</p>
 						</MDBCol>
 					</MDBRow>
+
 					<MDBRow>
-						<MDBCol md="12">
-							<h2>Skills and Techniques</h2>
-						</MDBCol>
-					</MDBRow>
-					<MDBRow>
-						<MDBCol md="12">
+						<MDBCol md="12 pb-5">
 							<a href={this.state.resume}>
 								<MDBBtn outline className="evro-navy-btn">
 									Download my Resume
@@ -87,11 +81,17 @@ class HomePage extends React.Component {
 						</MDBCol>
 					</MDBRow>
 
+					<MDBRow className="pb-2">
+						<MDBCol md="12">
+							<h2 className="h2-responsive font-weight-normal">Skills and Techniques</h2>
+						</MDBCol>
+					</MDBRow>
+
 					<MDBRow>
 						<MDBCol lg="6" md="12" className="mb-4">
 							<MDBCard>
 								<MDBCardBody>
-									<MDBRow>
+									<MDBRow className="card-section-pad">
 										<MDBCol md="3">
 											<MDBSimpleChart
 												width={100}
@@ -102,7 +102,7 @@ class HomePage extends React.Component {
 											/>
 										</MDBCol>
 										<MDBCol md="9">
-											<h2 className="skill-category">Web Development</h2>
+											<h3 className="skill-category h2-responsive">Web Development</h3>
 										</MDBCol>
 									</MDBRow>
 
@@ -115,7 +115,7 @@ class HomePage extends React.Component {
 													}}
 												/>
 											</MDBCol>
-											<MDBCol md="6" className="mobile-margin-col">
+											<MDBCol md="6">
 												<div
 													dangerouslySetInnerHTML={{
 														__html: this.state.about_skill_web_development_col_two
@@ -131,7 +131,7 @@ class HomePage extends React.Component {
 						<MDBCol lg="6" md="12" className="mb-lg-0 mb-4">
 							<MDBCard>
 								<MDBCardBody>
-									<MDBRow>
+									<MDBRow className="card-section-pad">
 										<MDBCol md="3">
 											<MDBSimpleChart
 												width={100}
@@ -142,7 +142,7 @@ class HomePage extends React.Component {
 											/>
 										</MDBCol>
 										<MDBCol md="9">
-											<h2 className="skill-category">Digital Marketing</h2>
+											<h3 className="skill-category h2-responsive">Digital Marketing</h3>
 										</MDBCol>
 									</MDBRow>
 
@@ -164,7 +164,7 @@ class HomePage extends React.Component {
 						<MDBCol lg="6" md="12" className="mb-lg-0 mb-4">
 							<MDBCard>
 								<MDBCardBody>
-									<MDBRow>
+									<MDBRow className="card-section-pad">
 										<MDBCol md="3">
 											<MDBSimpleChart
 												width={100}
@@ -175,7 +175,7 @@ class HomePage extends React.Component {
 											/>
 										</MDBCol>
 										<MDBCol md="9">
-											<h2 className="skill-category">Digital Analytics</h2>
+											<h3 className="skill-category h2-responsive">Digital Analytics</h3>
 										</MDBCol>
 									</MDBRow>
 
@@ -188,7 +188,7 @@ class HomePage extends React.Component {
 													}}
 												/>
 											</MDBCol>
-											<MDBCol md="6" className="mobile-margin-col">
+											<MDBCol md="6">
 												<div
 													dangerouslySetInnerHTML={{
 														__html: this.state.about_skill_web_analytics_col_two
@@ -204,7 +204,7 @@ class HomePage extends React.Component {
 						<MDBCol lg="6" md="12" className="mb-lg-0 mb-4">
 							<MDBCard>
 								<MDBCardBody>
-									<MDBRow>
+									<MDBRow className="card-section-pad">
 										<MDBCol md="3">
 											<MDBSimpleChart
 												width={100}
@@ -215,7 +215,7 @@ class HomePage extends React.Component {
 											/>
 										</MDBCol>
 										<MDBCol md="9">
-											<h2 className="skill-category">Data Science</h2>
+											<h3 className="skill-category h2-responsive">Data Science</h3>
 										</MDBCol>
 									</MDBRow>
 
@@ -228,7 +228,7 @@ class HomePage extends React.Component {
 													}}
 												/>
 											</MDBCol>
-											<MDBCol md="6" className="mobile-margin-col">
+											<MDBCol md="6">
 												<div
 													dangerouslySetInnerHTML={{
 														__html: this.state.about_skill_data_science_col_two
@@ -246,7 +246,9 @@ class HomePage extends React.Component {
 
 					<MDBRow>
 						<MDBCol md="12">
-							<h2>Education, Training, and Certifications</h2>
+							<h2 className="h2-responsive font-weight-normal">
+								Education, Training, and Certifications
+							</h2>
 						</MDBCol>
 					</MDBRow>
 					<MDBRow>

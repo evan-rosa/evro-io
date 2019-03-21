@@ -30,8 +30,6 @@ class HomePage extends React.Component {
 					h_one_span: res.data.items[0].h_one_span,
 					content: res.data.items[0].content
 				});
-				console.log(res.data.items[0].h_one);
-				console.log(home);
 			})
 			.catch((error) => this.setState({ error }));
 	}
@@ -46,15 +44,17 @@ class HomePage extends React.Component {
 				<div className="content pt-5">
 					<MDBContainer>
 						<MDBRow className="bring-to-front">
-							<MDBCol md="6" lg="8" className="mobile-pad">
+							<MDBCol md="7" lg="8" className="mobile-pad">
 								<MDBContainer>
-									<MDBRow>
+									<MDBRow className="pb-3">
 										<MDBCol>
-											<h1>
-												{this.state.h_one}
-												<span className="evro-red-font"> {this.state.h_one_span}</span>
+											<h1 className="h1">
+												<strong>
+													{this.state.h_one}
+													<span className="evro-red-font"> {this.state.h_one_span}</span>
+												</strong>
 											</h1>
-											<h2>{this.state.content}</h2>
+											<h2 className="h5-responsive line-height">{this.state.content}</h2>
 										</MDBCol>
 									</MDBRow>
 									<MDBRow>
@@ -107,7 +107,7 @@ class HomePage extends React.Component {
 									</MDBRow>
 								</MDBContainer>
 							</MDBCol>
-							<MDBCol md="6" lg="4" className="mb-4">
+							<MDBCol md="5" lg="4" className="mb-4">
 								<FeatureForm />
 							</MDBCol>
 						</MDBRow>

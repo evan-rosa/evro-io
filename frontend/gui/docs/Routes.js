@@ -7,6 +7,7 @@ import Project from './containers/projectBlock';
 import About from './components/About';
 import Contact from './components/contact';
 import Thanks from './components/thankyou';
+import Page404 from './components/Page404';
 
 class Routes extends React.Component {
 	render() {
@@ -18,6 +19,7 @@ class Routes extends React.Component {
 				<Route exact path="/contact" component={Contact} />
 				<Route exact path="/thank-you" component={Thanks} />
 				<Route exact path="/projects/:projectID" component={Project} />
+				<Route component={Page404} />
 			</Switch>
 		);
 	}

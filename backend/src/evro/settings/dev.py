@@ -1,5 +1,7 @@
 from .base import *
 import os
+import psycopg2
+import dj_database_url
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -7,7 +9,7 @@ DEBUG = True
 SECRET_KEY = os.environ.get('SECRET_KEY_DEV', 'SECRET_KEY_DEV')
 
 DB_DEV_NAME = os.environ.get('DB_DEV_NAME')
-DB_DEV_USER = os.environ.get('DB_DEV_PASS')
+DB_DEV_USER = os.environ.get('DB_DEV_USER')
 DB_DEV_PASS = os.environ.get('DB_DEV_PASS')
 
 
@@ -38,9 +40,3 @@ MEDIA_URL = 'http://127.0.0.1:8000/media/'
 TEMPLATES[0]['OPTIONS']['debug'] = DEBUG  # noqa F405
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-
-try:
-    from .local import *
-except ImportError:
-    pass

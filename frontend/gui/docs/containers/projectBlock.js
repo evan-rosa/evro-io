@@ -23,7 +23,6 @@ class ProjectBlock extends React.Component {
 					project: res.data,
 					image: res.data.project_image_url.url
 				});
-				console.log(res.data.project_image_url.url);
 			})
 			.catch((error) => this.setState({ error }));
 	}
@@ -34,11 +33,11 @@ class ProjectBlock extends React.Component {
 	render() {
 		return (
 			<div>
-				<MDBContainer>
-					<MDBRow>
-						<MDBCol md="12">
-							<h1>{this.state.project.project_h_one}</h1>
-							<h2>{this.state.project.project_h_two}</h2>
+				<MDBContainer className="pt-5 d-flex flex-nowrap desk-margin">
+					<MDBRow className="pb-5">
+						<MDBCol md="12" lg="6" className="order-lg-1 mobile-pad">
+							<h1 className="h1">{this.state.project.project_h_one}</h1>
+							<h2 className="h5-responsive">{this.state.project.project_h_two}</h2>
 							<p>{this.state.project.project_intro_p}</p>
 							<a href={this.state.project.project_url} target="_blank">
 								<MDBBtn outline className="evro-navy-btn">
@@ -46,17 +45,13 @@ class ProjectBlock extends React.Component {
 								</MDBBtn>
 							</a>
 						</MDBCol>
-					</MDBRow>
-					<MDBRow>
-						<MDBCol md="12">
-							<img src={this.state.image} alt="" className="img-fluid" />
+						<MDBCol md="12" lg="6" className="order-lg-2 mobile-pad">
+							<img src={this.state.image} alt="" className="img-fluid z-depth-5" />
 						</MDBCol>
-					</MDBRow>
-					<MDBRow>
-						<MDBCol md="12">
-							<h2>Site Released</h2>
+						<MDBCol md="12" lg="12" className="order-lg-3 desk-absolute">
+							<h2 className="h2-responsive font-weight-normal">Site Released</h2>
 							<p>{this.state.project.project_p}</p>
-							<h2>Technologies and Services</h2>
+							<h2 className="h2-responsive font-weight-normal">Technologies and Services</h2>
 							<div
 								dangerouslySetInnerHTML={{ __html: this.state.project.project_tech_stack_description }}
 							/>

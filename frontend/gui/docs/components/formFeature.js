@@ -52,7 +52,7 @@ class ContactForm extends React.Component {
 				<form onSubmit={(event) => this.handleFormSubmit(event)} className="needs-validation" noValidate>
 					<MDBCard>
 						<MDBCardBody className="z-depth-2">
-							<h3 className="text-center">
+							<h3 className="text-center h3-responsive">
 								<strong>Have a question?</strong>
 							</h3>
 							<hr />

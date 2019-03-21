@@ -13,8 +13,11 @@ class Footer extends React.Component {
 						<a href="https://www.djangoproject.com/" target="_blank">
 							Djangoproject.com
 						</a>,{' '}
+						<a href="https://www.django-rest-framework.org/" target="_blank">
+							Django-Rest-Framework.org
+						</a>,{' '}
 						<a href="https://wagtail.io/" target="_blank">
-							Wagtial.io
+							Wagtail.io
 						</a>, and
 						<a href="https://www.MDBootstrap.com" target="_blank">
 							{' '}
