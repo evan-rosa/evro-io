@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Widget, addResponseMessage, addLinkSnippet, addUserMessage } from 'react-chat-widget';
+import 'react-chat-widget/lib/styles.css';
+
 import {
 	MDBNavbar,
 	MDBNavbarBrand,
@@ -22,6 +25,16 @@ class App extends Component {
 		}));
 
 	closeCollapse = (collapseID) => () => this.state.collapseID === collapseID && this.setState({ collapseID: '' });
+
+	componentDidMount() {
+		addResponseMessage("So, what's on your mind?");
+	}
+
+	handleNewUserMessage = (newMessage) => {
+		console.log(`New message incoming! ${newMessage}`);
+		// Now send the message throught the backend API
+		addResponseMessage(response);
+	};
 
 	render() {
 		const overlay = (
@@ -72,6 +85,11 @@ class App extends Component {
 					<main>
 						<Routes />
 					</main>
+					<Widget
+						handleNewUserMessage={this.handleNewUserMessage}
+						title="Welcome to the EvRo.io ChatBot!"
+						subtitle="Ask the EvRo ChatBot anything about Evan Rosa."
+					/>
 				</div>
 			</Router>
 		);

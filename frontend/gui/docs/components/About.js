@@ -7,7 +7,7 @@ import '../index.css';
 
 import axios from 'axios';
 
-class HomePage extends React.Component {
+class About extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -106,24 +106,22 @@ class HomePage extends React.Component {
 										</MDBCol>
 									</MDBRow>
 
-									<MDBCardText>
-										<MDBRow>
-											<MDBCol md="6">
-												<div
-													dangerouslySetInnerHTML={{
-														__html: this.state.about_skill_web_development_col_one
-													}}
-												/>
-											</MDBCol>
-											<MDBCol md="6">
-												<div
-													dangerouslySetInnerHTML={{
-														__html: this.state.about_skill_web_development_col_two
-													}}
-												/>
-											</MDBCol>
-										</MDBRow>
-									</MDBCardText>
+									<MDBRow className="skill-list">
+										<MDBCol md="6">
+											<div
+												dangerouslySetInnerHTML={{
+													__html: this.state.about_skill_web_development_col_one
+												}}
+											/>
+										</MDBCol>
+										<MDBCol md="6">
+											<div
+												dangerouslySetInnerHTML={{
+													__html: this.state.about_skill_web_development_col_two
+												}}
+											/>
+										</MDBCol>
+									</MDBRow>
 								</MDBCardBody>
 							</MDBCard>
 						</MDBCol>
@@ -146,17 +144,15 @@ class HomePage extends React.Component {
 										</MDBCol>
 									</MDBRow>
 
-									<MDBCardText>
-										<MDBRow>
-											<MDBCol md="6">
-												<div
-													dangerouslySetInnerHTML={{
-														__html: this.state.about_skill_digital_marketing
-													}}
-												/>
-											</MDBCol>
-										</MDBRow>
-									</MDBCardText>
+									<MDBRow className="skill-list">
+										<MDBCol md="6">
+											<div
+												dangerouslySetInnerHTML={{
+													__html: this.state.about_skill_digital_marketing
+												}}
+											/>
+										</MDBCol>
+									</MDBRow>
 								</MDBCardBody>
 							</MDBCard>
 						</MDBCol>
@@ -179,24 +175,22 @@ class HomePage extends React.Component {
 										</MDBCol>
 									</MDBRow>
 
-									<MDBCardText>
-										<MDBRow>
-											<MDBCol md="6">
-												<div
-													dangerouslySetInnerHTML={{
-														__html: this.state.about_skill_web_analytics_col_one
-													}}
-												/>
-											</MDBCol>
-											<MDBCol md="6">
-												<div
-													dangerouslySetInnerHTML={{
-														__html: this.state.about_skill_web_analytics_col_two
-													}}
-												/>
-											</MDBCol>
-										</MDBRow>
-									</MDBCardText>
+									<MDBRow className="skill-list">
+										<MDBCol md="6">
+											<div
+												dangerouslySetInnerHTML={{
+													__html: this.state.about_skill_web_analytics_col_one
+												}}
+											/>
+										</MDBCol>
+										<MDBCol md="6">
+											<div
+												dangerouslySetInnerHTML={{
+													__html: this.state.about_skill_web_analytics_col_two
+												}}
+											/>
+										</MDBCol>
+									</MDBRow>
 								</MDBCardBody>
 							</MDBCard>
 						</MDBCol>
@@ -219,24 +213,22 @@ class HomePage extends React.Component {
 										</MDBCol>
 									</MDBRow>
 
-									<MDBCardText>
-										<MDBRow>
-											<MDBCol md="6">
-												<div
-													dangerouslySetInnerHTML={{
-														__html: this.state.about_skill_data_science_col_one
-													}}
-												/>
-											</MDBCol>
-											<MDBCol md="6">
-												<div
-													dangerouslySetInnerHTML={{
-														__html: this.state.about_skill_data_science_col_two
-													}}
-												/>
-											</MDBCol>
-										</MDBRow>
-									</MDBCardText>
+									<MDBRow className="skill-list">
+										<MDBCol md="6">
+											<div
+												dangerouslySetInnerHTML={{
+													__html: this.state.about_skill_data_science_col_one
+												}}
+											/>
+										</MDBCol>
+										<MDBCol md="6">
+											<div
+												dangerouslySetInnerHTML={{
+													__html: this.state.about_skill_data_science_col_two
+												}}
+											/>
+										</MDBCol>
+									</MDBRow>
 								</MDBCardBody>
 							</MDBCard>
 						</MDBCol>
@@ -251,7 +243,7 @@ class HomePage extends React.Component {
 							</h2>
 						</MDBCol>
 					</MDBRow>
-					<MDBRow>
+					<MDBRow className="skill-list">
 						<MDBCol md="12">
 							<div dangerouslySetInnerHTML={{ __html: this.state.about_education }} />
 						</MDBCol>
@@ -272,4 +264,4 @@ class HomePage extends React.Component {
 	}
 }
 
-export default HomePage;
+export default About;

@@ -34,6 +34,7 @@
     "react": "^16.8.1",
     "react-autosuggest": "^9.3.4",
     "react-chartjs-2": "^2.7.0",
+    "react-chat-widget": "^2.1.4-1",
     "react-dom": "^16.8.1",
     "react-image-lightbox": "5.0.0",
     "react-numeric-input": "^2.2.3",
