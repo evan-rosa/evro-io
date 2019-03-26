@@ -18,10 +18,14 @@ class Footer extends React.Component {
 						</a>,{' '}
 						<a href="https://wagtail.io/" target="_blank">
 							Wagtail.io
-						</a>, and
+						</a>,
 						<a href="https://www.MDBootstrap.com" target="_blank">
 							{' '}
 							MDBootstrap.com{' '}
+						</a>, and
+						<a href="https://reactjs.org/" target="_blank">
+							{' '}
+							Reactjs.org{' '}
 						</a>
 					</MDBContainer>
 				</div>
