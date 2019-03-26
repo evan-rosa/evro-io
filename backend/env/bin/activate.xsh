@@ -25,7 +25,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"/Users/Evro/Documents/Career/evro-io/evro/backend/env"
+$VIRTUAL_ENV = r"/Users/Evro/Documents/Career/evro-io/evro-test/backend/env"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]
